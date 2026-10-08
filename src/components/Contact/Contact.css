@@ -1,0 +1,109 @@
+.contact-section {
+  padding: 8rem 2rem 2rem;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto 6rem;
+  text-align: center;
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+/* Contact Social Buttons (Icon + Text) */
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 3rem;
+  color: #888;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Footer Icon Buttons */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #000;
+  border-radius: 50%; /* Round outline */
+  background: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.handwritten-note {
+  font-family: var(--font-handwriting);
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  display: block;
+  transform: rotate(-5deg);
+  margin-top: -1rem;
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .contact-socials {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,188 @@
+.hero-section {
+  position: relative;
+  height: calc(100vh - 60px);
+  min-height: 600px;
+  margin-bottom: 15vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Greeting text (Behind Photo) */
+.greeting-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-handwriting);
+  font-size: clamp(4rem, 12vw, 12rem);
+  font-weight: 500;
+  color: var(--color-text);
+  z-index: 1; /* Key: Behind photo */
+  line-height: 1;
+}
+
+.greeting-text .hey {
+  padding-left: 5%;
+}
+
+.greeting-text .there {
+  padding-right: 5%;
+}
+
+/* Photo */
+.photo-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(250px, 35vw, 450px);
+  z-index: 2; /* Key: In front of greeting, behind bottom text */
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+.profile-img:hover {
+  /* Soft orange glow matching your accent color */
+  filter: drop-shadow(0 0 30px rgba(255, 107, 0, 0.35));
+}
+
+/* The fade effect at the bottom of the photo */
+.photo-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  z-index: 3;
+}
+
+/* Status Pill */
+.status-pill {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  z-index: 4;
+  font-family: var(--font-handwriting);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Short Desc */
+.short-desc {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: right;
+  font-size: 1rem;
+  color: #444;
+  z-index: 4;
+}
+
+/* Bottom Texts */
+.bottom-text-left {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  z-index: 4; /* In front of photo */
+}
+
+.bottom-text-right {
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  text-align: right;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  z-index: 4;
+  color: #222;
+}
+
+.rise-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: riseFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes riseFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 4rem 0;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .greeting-text, .status-pill, .short-desc, .photo-container, .bottom-text-left, .bottom-text-right {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    text-align: center;
+    width: 100%;
+  }
+  .greeting-text {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .greeting-text .hey, .greeting-text .there {
+    padding: 0;
+  }
+  .photo-container {
+    width: 80%;
+    max-width: 300px;
+    order: -1; /* photo first on mobile */
+  }
+}

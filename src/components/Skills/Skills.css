@@ -1,0 +1,138 @@
+.skills-section {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto 15vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.column-heading {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+/* Skills Tags */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-pill {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background: #fff;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Learning List */
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learning-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.learning-item:first-child {
+  padding-top: 0;
+}
+
+.learning-item:last-child {
+  border-bottom: none;
+}
+
+.learning-text {
+  font-size: 1.05rem;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 400;
+}
+
+.orange-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-label {
+  font-size: 0.8rem;
+  color: #555;
+  background: #f4f4f4;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  white-space: nowrap;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+/* Fade-in Animation */
+.skills-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.skills-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .skills-grid {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .learning-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .status-label {
+    margin-left: 0;
+  }
+}
