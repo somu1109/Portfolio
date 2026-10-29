@@ -17,7 +17,7 @@ const Navbar = () => {
         <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
         <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
       </ul>
-      <a href="#resume" className="pill-btn nav-resume">Resume</a>
+      <a href="/Somu_Mandal_CV.pdf" target="_blank" rel="noopener noreferrer" className="pill-btn nav-resume">Resume</a>
     </nav>
   );
 };

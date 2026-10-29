@@ -108,7 +108,7 @@ const About = () => {
               reach out.
             </p>
           </div>
-          <a href="/Somu-Mandal-CV.pdf" download className="pill-btn cv-btn">
+          <a href="/Somu_Mandal_CV.pdf" download className="pill-btn cv-btn">
             Download CV
           </a>
         </div>
