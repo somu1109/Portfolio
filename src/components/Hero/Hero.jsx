@@ -17,9 +17,6 @@ const Hero = () => {
       <div className="hero-content">
         
         {/* Top Floating Elements */}
-        <div className="status-pill">
-          <span className="dot"></span> Available for internships
-        </div>
         
         <div className="short-desc">
           Frontend Developer who builds<br/>
