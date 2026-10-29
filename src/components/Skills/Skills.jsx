@@ -20,7 +20,18 @@ const Skills = () => {
   }, []);
 
   const skillsList = [
-    "HTML", "CSS", "JavaScript", "React JS", "React Router", "Git & GitHub"
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "React.js",
+    "React Router",
+    "C",
+    "REST APIs",
+    "Supabase",
+    "Razorpay",
+    "Git & GitHub",
+    "Responsive Design",
+    "UI Animations"
   ];
 
   return (
@@ -48,16 +59,19 @@ const Skills = () => {
             <li className="learning-item">
               <div className="learning-text">
                 <span className="orange-dot"></span>
-                Backend with Node.js, Express and MongoDB
+                Backend with Node.js, Express & MongoDB
               </div>
               <span className="status-label">In progress</span>
             </li>
             <li className="learning-item">
-              <div className="learning-text">Databases</div>
+              <div className="learning-text">
+                <span className="orange-dot"></span>
+                Next.js & Redux
+              </div>
               <span className="status-label">In progress</span>
             </li>
             <li className="learning-item">
-              <div className="learning-text">React (advanced)</div>
+              <div className="learning-text">React (Advanced)</div>
               <span className="status-label">Done through custom hooks</span>
             </li>
           </ul>
